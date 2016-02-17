@@ -1,7 +1,6 @@
 module DeviseTokenAuth
   class ApplicationController < DeviseController
     include DeviseTokenAuth::Concerns::SetUserByToken
-    skip_before_filter :verify_authenticity_token
     
     def resource_data
       response_data = @resource.as_json
